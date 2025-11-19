@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <titl>arayasaki Dev - About</title>
+    <link rel="stylesheet" href="galery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">Portofolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">about me</a></li>
+                    <li><a href="galery.html">galery</a></li>
+                    <li><a href="projects.html"class="active">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+ <main class="container galery-page">
+        <h1 class="section-title">ini semua adalah project ku</h1>
+
+        <section class="galery-content">
+                <div class="image-container"> 
+                    <div class="text-content"></div>                                                      
+                <img src="placeholder-image.png" alt="Profile Avatar" class="profile-avatar" >        
+            </div>
+                <div class="image-container">
+                <img src="placeholder-image.png" alt="Profile Avatar" class="profile-avatar">
+            </div>
+                <div class="image-container">
+                <img src="placeholder-image.png" alt="Profile Avatar" class="profile-avatar">
+            </div>
+            <div class="image-container2"> 
+                    <div class="text-content"></div>                                                      
+                <img src="placeholder-image.png" alt="Profile Avatar" class="profile-avatar" >        
+            </div>
+            <div class="image-container2"> 
+                    <div class="text-content"></div>                                                      
+                <img src="placeholder-image.png" alt="Profile Avatar" class="profile-avatar" >        
+            </div>
+            <div class="image-container2"> 
+                    <div class="text-content"></div>                                                      
+                <img src="placeholder-image.png" alt="Profile Avatar" class="profile-avatar" >        
+            </div>
+             </div>
+        </section>
+    </main>
+    <footer>
+    <medium>
+      situs randy mardiansyah © 2023 
+    </medium>
+  </footer>
+
+</body>
+</html>
+<style>:root {
+    --dark-bg: #111111; 
+    --text-color: #DDDDDD; 
+    --accent-color: #FF0066; 
+    --light-accent: #FF3399; 
+    --gray-text: #AAAAAA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER/NAVBAR STYLES */
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid #333; /* Garis pemisah tipis di bawah header */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--accent-color); /* Warna logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--gray-text);
+    margin-left: 30px;
+    font-size: 1.1em;
+    padding-bottom: 5px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--light-accent);
+    border-bottom: 2px solid var(--light-accent);
+}
+
+.home-page {
+    padding: 50px 0;
+}
+
+main
+
+.section-title {
+    font-size: medium;
+    font-weight: 2500;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.galery-content {
+    display:flow-root;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.image-container2{
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    background-color: #222222;
+    border-radius: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 150px;
+    text-align:initial;
+    float: left; width: 30%; margin: 10px;
+
+}
+
+.image-container{
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    background-color: #222222;
+    border-radius: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 150px;
+    text-align:initial;
+    float: left; width: 30%; margin: 10px;
+
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.profile-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    align-items: center;
+    text-align: center;
+ }
+
+ .text-content{
+    flex-grow: 1;
+}
+
+.text-content h1 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.text-content p {
+    margin-bottom: 20px;
+    color: var(--gray-text);
+    text-align: left;
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #abbaba;
+  color: rgb(17, 53, 119);
+}
+</style>

@@ -1,0 +1,171 @@
+/* GLOBAL STYLES */
+:root {
+    --dark-bg: #111111; 
+    --text-color: #DDDDDD; 
+    --accent-color: #FF0066; 
+    --light-accent: #FF3399; 
+    --gray-text: #AAAAAA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER/NAVBAR STYLES */
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid #333; /* Garis pemisah tipis di bawah header */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--accent-color); /* Warna logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--gray-text);
+    margin-left: 30px;
+    font-size: 1.1em;
+    padding-bottom: 5px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--light-accent);
+    border-bottom: 2px solid var(--light-accent);
+}
+
+/* ABOUT PAGE STYLES */
+.about-page {
+    padding: 50px 0;
+}
+
+main 
+
+.section-title {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+    text-align: left; /* Sesuaikan dengan gambar */
+}
+
+.about-content {
+    display: flex;
+    gap: 50px; /* Jarak antara gambar dan teks */
+    align-items: flex-start; /* Sejajarkan konten di bagian atas */
+}
+
+.image-container {
+    flex-shrink: 0; /* Pastikan gambar tidak menyusut */
+    width: 300px; /* Lebar gambar */
+    height: 300px; /* Tinggi gambar */
+    background-color: #222222; /* Latar belakang abu-abu gelap untuk gambar */
+    border-radius: 10px;
+    /* Efek gambar kartun yang disorot (sesuaikan jika ada gambar asli) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.profile-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8; /* Meniru efek gambar yang sedikit redup/gelap */
+}
+
+.text-content {
+    flex-grow: 1;
+}
+
+.text-content h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.text-content p {
+    margin-bottom: 20px;
+    color: var(--gray-text);
+    text-align: left;
+}
+
+/* SKILLS STYLES */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill-tag {
+    padding: 8px 15px;
+    background-color: var(--accent-color); /* Warna latar belakang tag */
+    color: var(--dark-bg); /* Warna teks tag */
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.skill-tag:hover {
+    background-color: var(--light-accent);
+    cursor: default;
+}
+
+/* Untuk tampilan di layar kecil */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-container {
+        width: 80%;
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+    nav ul li a {
+        margin-left: 15px;
+    }
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #abbaba;
+  color: rgb(54, 12, 209);
+}
