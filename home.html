@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <titl>arayasaki Dev - About</title>
+    <title>arayasaki Dev</title>
     <link rel="stylesheet" href="home.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
+    </head>
 <body>
 
     <header>
         <div class="container">
-            <h1 class="logo">Portofolio</h1>
+            <h1 class="logo">Portofolio</h1>    
             <nav>
                 <ul>
                     <li><a href="home.html" class="active">Home</a></li>
-                    <li><a href="index.html">about me</a></li>
+                    <li><a href="index.html"> about me</a></li>
                     <li><a href="galery.html">galery</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -25,165 +24,31 @@
     </header>
 
  <main class="container about-page">
-        <h1 class="section-title">selamat datang wahai anak muda umt</h1>
+        <h1 class="section-title">perkenalan </h1>
 
         <section class="home-content">
-            
+                <div class="image-container"> 
+                    <div class="text-content"></div>                                                      
+                <img src="profile.jpg" alt="Profile Avatar" class="profile-avatar" >        
+            </div>
 
             <div class="text-content">
                 <h3>salam kenal hangat </h3>
-                <p>saya adalah arayasaki ray mahasiswa elite yang berasal dari shibuuya tokyo </p>
+                saya adalah randy mardiansyah mahasiswa yang berasal dari TANGERANG,saya merupakan mahasiswa umt atau bisa di sebut universtas muhamahadiyah tangerang <br></br>
 
-                <p>saya akan mengajak anda keliling untuk mengenal saya dengan baik silahkan click yang berada di bawah ini: <li><a href="index.html">about me</a></li> nah link diatas adalah link tentang saya dan semua skill saya dan saya juga punya isi galery</p>
+                saya akan menceritakan tentang kemampuan atau skill saya yang berada di link ini <li><a href="index.html"> about me</a></li> 
 
-                <p>ini semua isi galery saya saat kunjungan ke universitas  <li><a href="galery.html">galery</a></li>semua kunjungan yang saya kunjungi adalah tempat yang menarik semua seperti: bunga sakura yang bermekaran suasana yang baru dan banyak lagi yang ada di galeri tersebut.</p>
-
-                <p>saya juga membuat projets seperti html dan python silahkan lihat lihat saja link di bawah ini :] <li><a href="projects.html">Projects</a></li> </p>
-             </div>
+                </div>
         </section>
+        <br></br>
     </main>
     <footer>
     <medium>
-      situs randy mardiansyah © 2023 
+      situs randy mardiansyah © 2025
     </medium>
   </footer>
 </body>
 
 </body>
 </html>
-<style>
-:root {
-    --dark-bg: #111111; 
-    --text-color: #DDDDDD; 
-    --accent-color: #FF0066; 
-    --light-accent: #FF3399; 
-    --gray-text: #AAAAAA;
-}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
-}
-
-body {
-    background-color: var(--dark-bg);
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* HEADER/NAVBAR STYLES */
-header {
-    padding: 20px 0;
-    border-bottom: 1px solid #333; /* Garis pemisah tipis di bawah header */
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.8em;
-    font-weight: 700;
-    color: var(--accent-color); /* Warna logo */
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--gray-text);
-    margin-left: 30px;
-    font-size: 1.1em;
-    padding-bottom: 5px;
-    transition: color 0.3s, border-bottom 0.3s;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    color: var(--light-accent);
-    border-bottom: 2px solid var(--light-accent);
-}
-
-.home-page {
-    padding: 50px 0;
-}
-
-main
-
-.section-title {
-    font-size: medium;
-    font-weight: 1500;
-    color: var(--accent-color);
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.home-content {
-    display:flow-root;
-    gap: 50px;
-    align-items: flex-start;
-}
-
-.image-container{
-    flex-shrink: 0;
-    width: 300px;
-    height: 300px;
-    background-color: #222222;
-    border-radius: 10px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 40px;
-    margin-right: 40px;
-    text-align: center;
-
-}
-
-.profile-avatar {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
-    align-items: center;
-    text-align: center;
- }
-
- .text-content{
-    flex-grow: 1;
-}
-
-.text-content h1 {
-    font-size: 1.8em;
-    font-weight: 600;
-    color: var(--text-color);
-    margin-top: 0;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.text-content p {
-    margin-bottom: 20px;
-    color: var(--gray-text);
-    text-align: left;
-}
-
-footer {
-  text-align: center;
-  padding: 5px;
-  background-color: #abbaba;
-  color: rgb(48, 22, 163);
-}
-</style>
