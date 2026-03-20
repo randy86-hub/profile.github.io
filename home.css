@@ -126,9 +126,127 @@ main
     text-align: left;
 }
 
+/* Update pada Body agar mendukung Sticky Footer */
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Tinggi minimal 100% layar */
+}
+
+/* Bagian konten utama akan mengambil sisa ruang yang ada */
+main {
+    flex: 1;
+}
+
 footer {
-  text-align: center;
-  padding: 5px;
-  background-color: #abbaba;
-  color: rgb(48, 22, 163);
+    text-align: center;
+    padding: 15px; /* Sedikit diperlebar agar proporsional */
+    background-color: #abbaba;
+    color: rgb(48, 22, 163);
+    width: 100%;
+}
+
+/* --- RESPONSIVE MOBILE STYLES --- */
+
+@media (max-width: 768px) {
+    /* Navbar: Logo & Menu menjadi vertikal */
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    nav ul li a {
+        margin: 0 10px;
+        font-size: 1em;
+    }
+
+    /* Reset Margin Gila pada Image Container */
+    .image-container {
+        margin-left: auto; /* Pusatkan secara otomatis */
+        margin-right: auto;
+        width: 250px; /* Ukuran lebih kecil untuk HP */
+        height: 250px;
+    }
+
+    /* Content Alignment */
+    .home-content {
+        display: flex;
+        flex-direction: column; /* Konten menumpuk ke bawah */
+        gap: 30px;
+    }
+
+    .text-content h1 {
+        font-size: 1.5em;
+    }
+
+    .text-content p {
+        text-align: center; /* Rata tengah agar lebih cantik di HP */
+        padding: 0 10px;
+    }
+
+    .section-title {
+        font-size: 1.2em;
+    }
+}
+
+/* Efek Scroll Halus untuk seluruh halaman */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animasi Hover pada Link Navigasi */
+nav ul li a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--light-accent);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Garis bawah akan memanjang saat di-hover */
+}
+
+/* Animasi Muncul (Fade In) saat halaman dimuat */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.home-content {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Efek Zoom pada Gambar saat di-hover */
+.image-container {
+    overflow: hidden; /* Agar gambar tidak keluar kotak saat membesar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 0, 102, 0.3);
+}
+
+.image-container img {
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
 }
