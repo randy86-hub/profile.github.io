@@ -273,3 +273,63 @@ nav ul li a:hover::after {
 .image-container:hover img {
     transform: scale(1.1);
 }
+
+/* --- RESPONSIVE MOBILE STYLES --- */
+
+@media (max-width: 768px) {
+    /* Mengatur container agar tidak terlalu mepet ke pinggir */
+    .container {
+        width: 95%;
+    }
+
+    /* Navbar: Mengubah menu menjadi vertikal atau tumpuk */
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: row; /* Tetap horizontal tapi margin diperkecil */
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+        margin: 0 10px;
+        font-size: 1em;
+    }
+
+    /* Galeri/Content: Mengubah float menjadi tumpuk ke bawah */
+    .galery-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Mengatur ulang image container agar pas di layar HP */
+    .image-container, 
+    .image-container2 {
+        float: none; /* Menghapus float */
+        width: 100%; /* Lebar penuh */
+        max-width: 300px; /* Batas maksimal agar tidak terlalu besar */
+        margin: 0 auto 20px auto; /* Center secara horizontal */
+        height: auto; /* Mengikuti tinggi gambar */
+        aspect-ratio: 1 / 1; /* Menjaga bentuk kotak */
+    }
+
+    /* Text Content */
+    .text-content {
+        text-align: center;
+    }
+
+    .text-content p {
+        text-align: center; /* Teks rata tengah agar lebih rapi di HP */
+        padding: 0 10px;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+        margin-bottom: 25px;
+    }
+}
